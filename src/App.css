@@ -1,0 +1,107 @@
+main {
+  padding: 50px;
+}
+
+body {
+  margin: 0;
+  background: #18181b;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: min(1000px, 90%);
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.column {
+  min-height: 320px;
+  padding: 30px;
+  background: #27272a;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.motion-column {
+  border: 1px solid #8b5cf6;
+}
+
+/* GEMENSAM STYLING */
+
+button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.css-card,
+.motion-card {
+  margin-top: 30px;
+  padding: 20px;
+  background: #18181b;
+  border-radius: 14px;
+  text-align: left;
+}
+
+/* UTAN MOTION
+   HOVER & CLICK */
+
+.css-button {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.css-button:hover {
+  transform: scale(1.1);
+  background-color: #f97316;
+}
+
+.css-button:active {
+  transform: scale(0.95);
+}
+
+/* UTAN MOTION
+VISA / DÖLJ KORT */
+
+.css-card {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.css-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MED MOTION */
+
+.motion-card {
+  cursor: grab;
+  user-select: none;
+}
+
+.motion-card:active {
+  cursor: grabbing;
+}
